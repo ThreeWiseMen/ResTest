@@ -6,16 +6,16 @@ Testing REST with curl:
 
 = POST to Create
 
-curl -i -H "Accept: application/json" -H "Content-Type: application/json" -X POST -d '{"first_name":"Stacey","email":"stacey@threewisemen.ca"}' http://localhost:3000/people
+curl -i -H "Accept: application/json" -H "Content-Type: application/json" -X POST -d '{"first_name":"Stacey","email":"stacey@threewisemen.ca"}' http://restest.threewisemen.ca/people
 
 = PUT to Update
 
-curl -i -H "Accept: application/json" -H "Content-Type: application/json" -H "X-Http-Method-Override: PUT" -X POST -d '{"last_name":"Vetzal"}' http://localhost:3000/people/1
+curl -i -H "Accept: application/json" -H "Content-Type: application/json" -H "X-Http-Method-Override: PUT" -X POST -d '{"last_name":"Vetzal"}' http://restest.threewisemen.ca/people/1
 
 = GET to Show
 
-curl -i -H "Accept: application/json" -H "Content-Type: application/json" http://localhost:3000/people/1
+curl -i -H "Accept: application/json" -H "Content-Type: application/json" http://restest.threewisemen.ca/people/1
 
 = DELETE to Destroy
 
-curl -i -H "Accept: application/json" -H "Content-Type: application/json" -H "X-Http-Method-Override: DELETE" -X POST -d '{"first_name":"Stacey","email":"stacey@threewisemen.ca"}' http://localhost:3000/people/13
+curl -i -H "Accept: application/json" -H "Content-Type: application/json" -H "X-Http-Method-Override: DELETE" -X POST -d '{"first_name":"Stacey","email":"stacey@threewisemen.ca"}' http://restest.threewisemen.ca/people/1
