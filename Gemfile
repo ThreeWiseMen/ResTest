@@ -44,6 +44,7 @@ group :development do
   gem 'rvm-capistrano'
 end
 
+gem 'therubyracer', group: :production
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
