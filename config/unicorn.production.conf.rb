@@ -1,4 +1,4 @@
-APP_HOME = '/home/reaction/Reaction'
+APP_HOME = '/home/restest/ResTest'
 worker_processes 2
 
 working_directory "#{APP_HOME}/current" # available in 0.94.0+
