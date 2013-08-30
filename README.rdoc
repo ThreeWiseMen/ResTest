@@ -1,28 +1,21 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This project hopes soon to illustrate an efficient and accurate REST server.
 
-Things you may want to cover:
+Testing REST with curl:
 
-* Ruby version
+= POST to Create
 
-* System dependencies
+curl -i -H "Accept: application/json" -H "Content-Type: application/json" -X POST -d '{"first_name":"Stacey","email":"stacey@threewisemen.ca"}' http://localhost:3000/people
 
-* Configuration
+= PUT to Update
 
-* Database creation
+curl -i -H "Accept: application/json" -H "Content-Type: application/json" -H "X-Http-Method-Override: PUT" -X POST -d '{"last_name":"Vetzal"}' http://localhost:3000/people/1
 
-* Database initialization
+= GET to Show
 
-* How to run the test suite
+curl -i -H "Accept: application/json" -H "Content-Type: application/json" http://localhost:3000/people/1
 
-* Services (job queues, cache servers, search engines, etc.)
+= DELETE to Destroy
 
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+curl -i -H "Accept: application/json" -H "Content-Type: application/json" -H "X-Http-Method-Override: DELETE" -X POST -d '{"first_name":"Stacey","email":"stacey@threewisemen.ca"}' http://localhost:3000/people/13
