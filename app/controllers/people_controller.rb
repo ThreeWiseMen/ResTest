@@ -2,6 +2,15 @@ class PeopleController < ApplicationController
   skip_before_filter :verify_authenticity_token
   respond_to 'json'
 
+  def show
+    begin
+      person = Person.find(params[:id])
+      respond_with person
+    rescue
+      render :text => :nil, :status => :not_found
+    end
+  end
+
   def create
     person = Person.create(person_params)
     respond_with person
