@@ -9,7 +9,7 @@ default_run_options[:pty] = true
 set :application, "ResTest"
 set :repository,  "git@github.com:ThreeWiseMen/ResTest.git"
 
-set :deploy_to, "~/#{application}"
+set :deploy_to, "/home/restest/#{application}"
 
 set :scm, :git
 
