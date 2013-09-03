@@ -47,7 +47,9 @@ class PeopleController < ApplicationController
       :first_name => "Stacey",
       :last_name => "Vetzal",
       :phone => "905-555-1212",
-      :email => "stacey@threewisemen.ca"
+      :email => "stacey@threewisemen.ca",
+      :created_at => Time.now,
+      :updated_at => Time.now
     )
   end
 
