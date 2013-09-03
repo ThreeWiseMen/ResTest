@@ -17,14 +17,14 @@ class PeopleController < ApplicationController
   end
 
   def update
-    person = Person.find(person_id)
+    person = find_person
     person.update_attributes!(person_params)
     respond_with person
   end
 
   def destroy
     begin
-      person = Person.find(person_id)
+      person = find_person
       person.destroy!
       respond_with nil
     rescue
